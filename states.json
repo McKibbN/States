@@ -1,0 +1,12 @@
+{"states":[
+{"id":"CA", "state_name":"California", "population":38.8},
+{"id":"TX", "state_name":"Texas", "population":27},
+{"id":"FL", "state_name":"Florida", "population":19.9},
+{"id":"NY", "state_name":"New York", "population":19.8},
+{"id":"IL", "state_name":"Illinois", "population":12.9},
+{"id":"PA", "state_name":"Pennsylvania", "population":12.8},
+{"id":"OH", "state_name":"Ohio", "population":11.6},
+{"id":"GA", "state_name":"Georgia", "population":10.1},
+{"id":"NC", "state_name":"North Carolina", "population":10},
+{"id":"MI", "state_name":"Michigan", "population":9.9},
+]}

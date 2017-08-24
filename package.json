@@ -1,0 +1,14 @@
+{
+  "name": "States",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "jquery": "^3.2.1",
+    "less": "^2.7.2",
+    "less-middleware": "^2.2.1",
+    "mongo": "^0.1.0"
+  }
+}
