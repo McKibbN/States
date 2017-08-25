@@ -1,6 +1,7 @@
 var express = require("express");
 var lessMiddleware = require('less-middleware');
 var app = express();
+var logger = require("morgan");
 var router = express.Router();
 var path = __dirname + '/views/';
 var states = [
@@ -20,6 +21,7 @@ console.log(states);
 app.use(lessMiddleware(path));
 app.use(express.static(path));
 app.use("/",router);
+app.use(logger('dev'));
 
 router.use(function (req,res,next) {
   console.log("/" + req.method);
@@ -41,6 +43,16 @@ app.get('/states/:id', function(req,res) {
     res.send(`${matches[0].population} Million.`);
   }
 });
+
+app.get('/states?:secret', function(req, res) {
+        let secret = req.query['secret'];
+        if (secret !== '51') {
+          res.status(401).send('Nothing to see here, Move Along!');
+        } else {
+          res.send("id:AZ, state_name:Arizona, population:6.9");
+          next();
+        }
+      });
 
 app.listen(3000,function(){
   console.log("Live at Port 3000");
